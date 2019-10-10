@@ -1,26 +1,13 @@
-![](screenshot.png)
+At YouTube, links in the description of the videos are converted to an ugly link upon click. This link enables tracking for YouTube.
 
-- Firefox: https://addons.mozilla.org/addon/dont-track-me-google1/ (Firefox on Android is also supported).
-- Chrome: https://chrome.google.com/webstore/detail/dont-track-me-google/gdbofhhdmcladcmmfjolgndfkpobecpg
-- Opera: https://addons.opera.com/extensions/details/dont-track-me-google/
+For example, the links in the description of the videos
 
-At the Google Search engine, search results are converted to an ugly link upon click. This link enables tracking for Google.
+- `https://github.com/microsoft/PowerToys` will be replaced with:
+- `https://www.youtube.com/redirect?q=https%3A%2F%2Fgithub.com%2Fmicrosoft%2FPowerToys&redir_token=b0euJIFvUfZ23wYlGHnZjQ3zHpZ8MTU3MDgxOTM2NEAxNTcwNzMyOTY0&event=video_description&v=4pteCeFXnsw`
 
-For example, the search entry
-
-- `http://www.google.com/` (when searching for "Google") will be replaced with:
-- `https://encrypted.google.com/url?sa=t&rct=j&q=Google&source=web&cd=8&sqi=2&ved=0CFgQFjAH&url=http%3A%2F%2Fwww.google.com%2F&ei=Ej__TrCkJo2bOrSs2aIE&usg=AFQjCNG5-9Jej-ukVeakTgwonqt2narbYg&sig2=f9f1dWcZoj6ZUC2Zxy9y2g`
-
-This script removes Google's link-conversion/tracking feature.
-This speeds up loading search results and allows you to right-click or tap to copy the link URL.
+This script removes Youtube's link-conversion/tracking feature.
+This speeds up loading and allows you to right-click or tap to copy the link URL.
 
 ## History
 
-- december 2011 - First release, as a [user script](https://web.archive.org/web/20140424090201/https://userscripts.org/scripts/show/121923).
-- november 2012 - Published as a Chrome extension.
-- april 2013 - Updated Chrome extension to disable `<a ping>`. This version worked fine for three years without any modifications.
-- july 2016 - Published Firefox addon. Rewrote the program from scratch to recognize more URLs and to use modern techniques for a better performance.
-- september 2016 - Restored referrer hiding functionality with minimal impact using
-  [referrer policies](https://blog.mozilla.org/security/2015/01/21/meta-referrer/).
-
-Brought to you by Rob Wu (https://robwu.nl).
+- october 2019 - Forked from https://github.com/Rob--W/dont-track-me-google and adapted for YouTube

@@ -2,7 +2,7 @@
 all: build firefox
 
 build:
-	zip -r dont-track-me-google.zip \
+	zip -r dont-track-me-youtube.zip \
 	    manifest.json \
 	    contentscript.js \
 	    options.js \
@@ -10,11 +10,11 @@ build:
 	    icon*.png
 
 firefox: build
-	cp dont-track-me-google.zip dont-track-me-google-firefox.zip
+	cp dont-track-me-youtube.zip dont-track-me-youtube-firefox.zip
 	mkdir fxtmpdir
 	node tools/make-firefox-manifest.js > fxtmpdir/manifest.json
 	cd fxtmpdir && \
-		zip -u ../dont-track-me-google-firefox.zip -j fxtmpdir/manifest.json && \
+		zip -u ../dont-track-me-youtube-firefox.zip -j fxtmpdir/manifest.json && \
 		cd ..
 	rm -rf fxtmpdir
 
@@ -23,5 +23,5 @@ userscript:
 
 clean:
 	rm -rf fxtmpdir
-	rm -f dont-track-me-google.zip
-	rm -f dont-track-me-google-firefox.zip
+	rm -f dont-track-me-youtube.zip
+	rm -f dont-track-me-youtube-firefox.zip

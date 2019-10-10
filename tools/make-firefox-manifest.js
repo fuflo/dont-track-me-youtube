@@ -8,7 +8,7 @@ const manifest = JSON.parse(fs.readFileSync(manifestPath));
 
 manifest.applications = {
     gecko: {
-        id: 'dont-track-me-google@robwu.nl',
+        id: 'dont-track-me-youtube@fuflo',
     },
 };
 
